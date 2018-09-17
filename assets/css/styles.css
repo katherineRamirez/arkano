@@ -1,0 +1,215 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+	background-color: #ECEFF4;
+}
+
+.w3-bar-block{
+	width: 25%;
+	background-color: #222D31;
+	color: #fff;
+}
+
+.title{
+	background-color: #3B8CBC;
+	padding: 1em;
+	margin-top: 0;
+}
+
+.avatar{
+	width: 50px;
+	margin-left: 1em;
+}
+
+.navegacion{
+	background-color: #1E272C;
+	color: #26383F;
+	margin-top: 2em;
+	padding: 1em;
+}
+
+.fa-caret-down{
+	margin-left: 10em;
+}
+
+.fa-briefcase{
+	margin-right: 0.50em;
+}
+
+.w3-dropdown-hover .w3-bar-block a{
+	background-color: #3B8CBC;
+}
+
+.w3-dropdown-hover{
+	border-left: 5px solid #3B8CBC;
+}
+
+span{
+	font-size: 15px;
+}
+
+.container-formulario{
+	margin-left: 28%;
+	position: relative;
+	top: 1.5em;
+}
+
+.formulario{
+	background-color: #fff;
+	max-width: 50%;
+	border-top: 5px solid #3B8CBC;
+}
+
+input{
+	width: 100%;
+	padding: 0.30em;
+}
+
+.btn{
+	width: 100%;
+	background-color: #3B8CBC;
+	color: #fff;
+}
+
+.w3-xlarge{
+	width: 100%;
+	background-color: #3B8CBC;
+	position: relative;
+	bottom: 1em;
+	color: #fff;
+}
+
+#tarjetas{
+	margin-left: 28%;
+	display: none;
+	color: #fff;
+}
+
+.w3-card-4{
+	position: relative;
+	max-width: 100%;
+	bottom: 30em;
+	margin-top: 2em;
+}
+
+.tar1{
+	background-color: #00C0EF;
+}
+
+.info1{
+	color: #00ABD6;
+	font-size: 8em;
+	padding: 0.20em;
+}
+
+.tarInfo1{
+	background-color: #00ABD6;
+}
+
+.tar2{
+	background-color: #00A65A;
+}
+
+.info2{
+	color: #009551;
+	font-size: 8em;
+	padding: 0.20em;
+}
+
+.tarInfo2{
+	background-color: #009551;
+}
+
+.tar3{
+	background-color: #F29C11;
+}
+
+.info3{
+	color: #D08410;
+	font-size: 8em;
+	padding: 0.20em;
+}
+
+.tarInfo3{
+	background-color: #D08410;
+}
+
+.tar4{
+	background-color: #DD4C39;
+}
+
+.info4{
+	color: #C54134;
+	font-size: 8em;
+	padding: 0.20em;
+}
+
+.tarInfo4{
+	background-color: #C54134;
+}
+
+.tar5{
+	background-color: #E5D839;
+}
+
+.info5{
+	color: #C8BD33;
+	font-size: 8em;
+	padding: 0.20em;
+}
+
+.tarInfo5{
+	background-color: #C8BD33;
+}
+
+.tar6{
+	background-color: #9A65EB;
+}
+
+.info6{
+	color: #4B2486;
+	font-size: 8em;
+	padding: 0.20em;
+}
+
+.tarInfo6{
+	background-color: #4B2486;
+}
+
+.styleContainerWidget{
+	background-color: #3480A9;
+	margin: 6em 1em 0 1em;
+	text-align: center;
+}
+
+.styleContainerWidget h2{
+	padding-top: 1em;
+}
+
+.styleContainerWidget h3{
+	background-color: #fff;
+	color: #000;
+	padding: 1.5em;
+	text-align: justify;
+	font-size: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+	.titleDashboard{
+		text-align: center;
+	}
+	.formulario{
+		max-width: 70%;
+	}
+	.w3-bar-block{
+		width: 100%;
+	}
+	.w3-card-4{
+		right: 4em;
+		width: 100%;
+	}
+}

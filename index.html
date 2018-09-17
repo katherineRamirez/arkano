@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>e-Ventas</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Archivo externo css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav>
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="sidebar">
+        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <h3 class="title text-center"><strong>e-Ventas</strong></h3>
+      <div class="w3-row">
+        <div class="w3-quarter">
+          <img class="avatar" src="assets/images/avatar.png">
+        </div>
+        <div class="w3-threequarter">
+          <h5>Alexander Pierce</h5>
+        </div>
+      </div>
+      <div class="w3-row">
+        <h5 class="navegacion text-center">MENU PRINCIPAL</h5>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button"><i class="fas fa-briefcase"></i>Dashboard <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block">
+          <a id="btnformulario" href="#" class="w3-bar-item w3-button">Formulario</a>
+          <a id="btnEstadisticas" href="#" class="w3-bar-item w3-button">Estadísticas</a>
+        </div>
+      </div>
+      <div id="widget"></div>
+    </div>
+  </nav>
+
+  <!-- Página de alta datos -->
+  <section>
+    <div class="w3-main container-formulario">
+        <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+      <div class="w3-row">
+        <h2 class="titleDashboard">Dashboard <span>Estadísticas</span></h2>
+      </div>
+      <div id="pAltaDatos" class="container formulario">
+        <form id="formDashboard">
+          <div class="w3-row">
+            <h4>Datos en Dashboard</h4>
+          </div>
+          <div class="w3-row">
+            <label>Nombre del dashboard</label>
+            <p><input id="nombreDashboard" type="text" name="Nombre del dashboard" placeholder="Nombre del dashboard"></p>
+          </div>
+          <div class="w3-row">
+            <label>Cantidad de nuevas compras</label>
+            <p><input id="nuevasCompras" type="number" name="Nuevas compras" placeholder="Nuevas compras"></p>
+          </div>
+          <div class="w3-row">
+            <label>Incremento de compras</label>
+            <p><input id="incrementoCompras" type="number" name="Incremento de compras" placeholder="Incremento de compras"></p>
+          </div>
+          <div class="w3-row">
+            <label>Cantidad de nuevos usuarios</label>
+            <p><input id="nuevosUsuarios" type="number" name="Nuevos usuarios" placeholder="Nuevos usuarios"></p>
+          </div>
+          <div class="w3-row">
+            <label>Cantidad de nuevas visitas</label>
+            <p><input id="nuevasVisitas" type="number" name="Nuevas visitas" placeholder="Nuevas visitas"></p>
+          </div>
+          <div class="w3-row">
+            <label>Fecha de ingreso</label>
+            <p><input id="fecha" type="date" name="Fecha"></p>
+          </div>
+          <div class="w3-row w3-right">
+            <p><input onclick="validacion()" class="btn" type="submit" name="Ingresar datos" value="Ingresar Datos"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Página de dashboard -->
+  <section id="tarjetas">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="w3-container">
+          <div class="w3-card-4 tar1">
+          <div class="w3-row">
+            <div id="tarNombreDashboard" class="w3-third">
+              
+            </div>
+            <div class="w3-twothird">
+              <i class="fas fa-business-time info1"></i>
+            </div>
+          </div>
+            <div class="w3-container tarInfo1 w3-center">
+              <p>Más Info <i class="fas fa-arrow-alt-circle-right"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="w3-container">
+          <div class="w3-card-4 tar2">
+          <div class="w3-row">
+            <div id="tarNuevasCompras" class="w3-third">
+              
+            </div>
+            <div class="w3-twothird">
+              <i class="fas fa-shopping-bag info2"></i>
+            </div>
+          </div>
+            <div class="w3-container tarInfo2 w3-center">
+              <p>Más Info <i class="fas fa-arrow-alt-circle-right"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="w3-container">
+          <div class="w3-card-4 tar3">
+          <div class="w3-row">
+            <div id="tarIncrementoCompras" class="w3-third">
+              
+            </div>
+            <div class="w3-twothird">
+              <i class="fas fa-chart-area info3"></i>
+            </div>
+          </div>
+            <div class="w3-container tarInfo3 w3-center">
+              <p>Más Info <i class="fas fa-arrow-alt-circle-right"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="w3-container">
+          <div class="w3-card-4 tar4">
+          <div class="w3-row">
+            <div id="taruevosUsuarios" class="w3-third">
+              
+            </div>
+            <div class="w3-twothird">
+              <i class="fas fa-user-plus info4"></i>
+            </div>
+          </div>
+            <div class="w3-container tarInfo4 w3-center">
+              <p>Más Info <i class="fas fa-arrow-alt-circle-right"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="w3-container">
+          <div class="w3-card-4 tar5">
+          <div class="w3-row">
+            <div id="tarNuevasVisitas" class="w3-third">
+              
+            </div>
+            <div class="w3-twothird">
+              <i class="fas fa-chart-pie info5"></i>
+            </div>
+          </div>
+            <div class="w3-container tarInfo5 w3-center">
+              <p>Más Info <i class="fas fa-arrow-alt-circle-right"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="w3-container">
+          <div class="w3-card-4 tar6">
+          <div class="w3-row">
+            <div id="tarFecha" class="w3-third">
+              
+            </div>
+            <div class="w3-twothird">
+              <i class="far fa-calendar-alt info6"></i>
+            </div>
+          </div>
+            <div class="w3-container tarInfo6 w3-center">
+              <p>Más Info <i class="fas fa-arrow-alt-circle-right"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>
