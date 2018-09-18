@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Archivo externo css -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/media.css">  
 </head>
 <body>
 
@@ -55,30 +56,30 @@
           </div>
           <div class="w3-row">
             <label>Nombre del dashboard</label>
-            <p><input id="nombreDashboard" type="text" name="Nombre del dashboard" placeholder="Nombre del dashboard"></p>
+            <p><input id="nombreDashboard" type="text" name="Nombre del dashboard" placeholder="Nombre del dashboard" required></p>
           </div>
           <div class="w3-row">
             <label>Cantidad de nuevas compras</label>
-            <p><input id="nuevasCompras" type="number" name="Nuevas compras" placeholder="Nuevas compras"></p>
+            <p><input id="nuevasCompras" type="number" name="Nuevas compras" placeholder="Nuevas compras" required></p>
           </div>
           <div class="w3-row">
             <label>Incremento de compras</label>
-            <p><input id="incrementoCompras" type="number" name="Incremento de compras" placeholder="Incremento de compras"></p>
+            <p><input id="incrementoCompras" type="number" name="Incremento de compras" placeholder="Incremento de compras" required></p>
           </div>
           <div class="w3-row">
             <label>Cantidad de nuevos usuarios</label>
-            <p><input id="nuevosUsuarios" type="number" name="Nuevos usuarios" placeholder="Nuevos usuarios"></p>
+            <p><input id="nuevosUsuarios" type="number" name="Nuevos usuarios" placeholder="Nuevos usuarios" required></p>
           </div>
           <div class="w3-row">
             <label>Cantidad de nuevas visitas</label>
-            <p><input id="nuevasVisitas" type="number" name="Nuevas visitas" placeholder="Nuevas visitas"></p>
+            <p><input id="nuevasVisitas" type="number" name="Nuevas visitas" placeholder="Nuevas visitas" required></p>
           </div>
           <div class="w3-row">
             <label>Fecha de ingreso</label>
-            <p><input id="fecha" type="date" name="Fecha"></p>
+            <p><input id="fecha" type="date" name="Fecha" required></p>
           </div>
           <div class="w3-row w3-right">
-            <p><input onclick="validacion()" class="btn" type="submit" name="Ingresar datos" value="Ingresar Datos"></p>
+            <p><input onclick="validacion()" class="btn"  name="Ingresar datos" value="Ingresar Datos"></p>
           </div>
         </form>
       </div>
@@ -92,11 +93,10 @@
         <div class="w3-container">
           <div class="w3-card-4 tar1">
           <div class="w3-row">
-            <div id="tarNombreDashboard" class="w3-third">
-              
-            </div>
+            <div id="tarNombreDashboard" class="w3-third valorAgregado"></div>
             <div class="w3-twothird">
               <i class="fas fa-business-time info1"></i>
+              <p>Nombre del dashboard</p>
             </div>
           </div>
             <div class="w3-container tarInfo1 w3-center">
@@ -110,11 +110,10 @@
         <div class="w3-container">
           <div class="w3-card-4 tar2">
           <div class="w3-row">
-            <div id="tarNuevasCompras" class="w3-third">
-              
-            </div>
+            <div id="tarNuevasCompras" class="w3-third valorAgregado"></div>
             <div class="w3-twothird">
               <i class="fas fa-shopping-bag info2"></i>
+              <p>Cantidad de nuevas compras</p>
             </div>
           </div>
             <div class="w3-container tarInfo2 w3-center">
@@ -128,11 +127,10 @@
         <div class="w3-container">
           <div class="w3-card-4 tar3">
           <div class="w3-row">
-            <div id="tarIncrementoCompras" class="w3-third">
-              
-            </div>
+            <div id="tarIncrementoCompras" class="w3-third valorAgregado"></div>
             <div class="w3-twothird">
               <i class="fas fa-chart-area info3"></i>
+              <p>Incremento de compras</p>
             </div>
           </div>
             <div class="w3-container tarInfo3 w3-center">
@@ -148,11 +146,10 @@
         <div class="w3-container">
           <div class="w3-card-4 tar4">
           <div class="w3-row">
-            <div id="taruevosUsuarios" class="w3-third">
-              
-            </div>
+            <div id="tarNuevosUsuarios" class="w3-third valorAgregado"></div>
             <div class="w3-twothird">
               <i class="fas fa-user-plus info4"></i>
+              <p>Cantidad de nuevos usuarios</p>
             </div>
           </div>
             <div class="w3-container tarInfo4 w3-center">
@@ -166,11 +163,10 @@
         <div class="w3-container">
           <div class="w3-card-4 tar5">
           <div class="w3-row">
-            <div id="tarNuevasVisitas" class="w3-third">
-              
-            </div>
+            <div id="tarNuevasVisitas" class="w3-third valorAgregado"></div>
             <div class="w3-twothird">
               <i class="fas fa-chart-pie info5"></i>
+              <p>Cantidad de nuevas visitas</p>
             </div>
           </div>
             <div class="w3-container tarInfo5 w3-center">
@@ -184,11 +180,10 @@
         <div class="w3-container">
           <div class="w3-card-4 tar6">
           <div class="w3-row">
-            <div id="tarFecha" class="w3-third">
-              
-            </div>
+            <div id="tarFecha" class="w3-third valorAgregado"></div>
             <div class="w3-twothird">
               <i class="far fa-calendar-alt info6"></i>
+              <p>Fecha de ingreso</p>
             </div>
           </div>
             <div class="w3-container tarInfo6 w3-center">

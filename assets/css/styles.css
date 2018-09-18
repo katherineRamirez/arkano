@@ -198,18 +198,12 @@ input{
 	font-size: 2em;
 }
 
-@media only screen and (max-width: 768px) {
-	.titleDashboard{
-		text-align: center;
-	}
-	.formulario{
-		max-width: 70%;
-	}
-	.w3-bar-block{
-		width: 100%;
-	}
-	.w3-card-4{
-		right: 4em;
-		width: 100%;
-	}
+.w3-twothird{
+	text-align: center;
+	margin-left: 0;
+}
+
+.valorAgregado h2{
+	text-align: center;
+	margin-top: 2em;
 }
